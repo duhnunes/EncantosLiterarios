@@ -1,0 +1,15 @@
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+
+  padding:0.5625rem 1.25rem;
+
+  background-color:var(--shape-base);
+  border-radius:9999px;
+
+  font:var(--tag);
+  color:var(--text-body);
+  text-transform:uppercase;
+  letter-spacing:5%;
+}

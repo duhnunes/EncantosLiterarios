@@ -1,0 +1,31 @@
+.navbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  max-width:70rem;
+  width:100%;
+  margin-inline:auto;
+
+  background-color:transparent;
+
+  & i:nth-child(1) {
+    display:block;
+  }
+
+  & i:nth-child(2) {
+    display:none;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    & i:nth-child(1) {
+      display:none;
+    }
+
+    & i:nth-child(2) {
+      display:block;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.logo {
+  display:inline-block;
+  background:url(../assets/icons/logo-horizontal.svg) no-repeat center/cover;
+
+  width:14.375rem;
+  height:3.625rem;
+}
+.logo-icon {
+  display:inline-block;
+  background:url(../assets/icons/logo-symbol.svg) no-repeat center/cover;
+
+  width:4rem;
+  height:3rem;
+}
+
+.instagram {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/instagram.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}
+.x {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/twitter.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}
+.facebook {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/facebook.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}
+.discord {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/discord.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}
+.whatsapp {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/whatsapp.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}
+.email {
+  display:inline-block;
+
+  width:1.5rem;
+  height:1.5rem;
+  background:url(../assets/icons/mail.svg) no-repeat center/cover;
+  filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(3466%) hue-rotate(157deg) brightness(94%) contrast(92%);
+}

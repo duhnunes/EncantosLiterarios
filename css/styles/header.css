@@ -1,0 +1,202 @@
+#hero {
+  background:url(../../assets/imgs/hero-background.png) no-repeat center/cover;
+  padding-top:3.5rem;
+  animation: heroBG .5s linear forwards;
+
+  width:100%;
+  max-height:59.25rem;
+  height:100%;
+
+  & .title {
+    max-width:41rem;
+    width:100%;
+    margin-inline:auto;
+    margin-top:10.25rem;
+  
+    text-align:center;
+  
+  
+    & h1 {
+      font:var(--title-lg);
+      color:var(--text-title);
+      margin-bottom:2rem;
+      opacity:0;
+
+      animation: titleIn 1s .25s linear forwards;
+    }
+    
+    & p {
+      font:var(--body-lg);
+      color:var(--text-body);
+      opacity:0;
+      animation: titleIn 1s .45s linear forwards;
+    }
+  
+  }
+}
+@keyframes heroBG {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes titleIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    .title {
+      & h1 {
+        font-size:1.75rem!important;
+      }
+  
+      & p {
+        font-size:0.75rem!important;
+      }
+    }
+  }
+}
+
+.hero-subtitle {
+  max-width: 75rem;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 6rem;
+  color: #696969;
+  text-align: center;
+
+  & span {
+    font: var(--subtitle);
+    position: relative;
+
+    & b {
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 5.5rem;
+        height: 5.5rem;
+        scale: 0;
+      }
+    }
+
+    &:nth-child(1) b::before {
+      top: -80px;
+      right: -50px;
+      background: url(../../assets/icons/flybook.svg) no-repeat center/cover;
+    }
+
+    &:nth-child(2) b::before {
+      top: 100px;
+      left: -540px;
+      background: url(../../assets/icons/ouija.svg) no-repeat center/cover;
+    }
+
+    &:nth-child(3) b::before {
+      top: 50px;
+      right: -50px;
+      background: url(../../assets/icons/ball.svg) no-repeat center/cover;
+    }
+  }
+
+  &:hover {
+    & span {
+      &:nth-child(1) {
+        animation: colorize .3s .25s linear forwards;
+
+        & b {
+          animation: colorizeBold .3s .25s linear forwards;
+  
+          &::before {
+            animation: scaleIn .3s .25s linear forwards;
+          }
+        }
+      }
+      &:nth-child(2) {
+        animation: colorize .3s .75s linear forwards;
+  
+        & b {
+          animation: colorizeBold .3s .75s linear forwards;
+  
+          &::before {
+            animation: scaleIn .3s .75s linear forwards;
+          }
+        }
+      }
+      &:nth-child(3) {
+        animation: colorize .3s 1.25s linear forwards;
+  
+        & b {
+          animation: colorizeBold .3s 1.25s linear forwards;
+  
+          &::before {
+            animation: scaleIn .3s 1.25s linear forwards;
+          }
+        }
+      }
+    }
+  }
+
+  & span:nth-child(1),
+  & span:nth-child(2),
+  & span:nth-child(3) {
+    & b::before {
+      animation: scaleOut .3s linear forwards;
+    }
+  }
+
+  & span:nth-child(1) b:hover::before,
+  & span:nth-child(2) b:hover::before,
+  & span:nth-child(3) b:hover::before {
+    animation: scaleIn .3s linear forwards;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-subtitle {
+    max-width:23.4375rem;
+    width:100%;
+    
+    & span {
+      font-size:1rem;
+    }
+  }
+}
+
+
+@media not (max-width: 978px) {
+  @keyframes colorize {
+    to {
+      color:var(--text-label);
+    }
+  }
+  @keyframes colorizeBold {
+    to {
+      color:var(--blue-light);
+    }
+  }
+  @keyframes scaleIn {
+    0% {
+      scale:0;
+    }
+    100% {
+      scale:1;
+    }
+  }
+  @keyframes scaleOut {
+    0% {
+      scale:1;
+    }
+    100% {
+      scale:0;
+    }
+  }
+}

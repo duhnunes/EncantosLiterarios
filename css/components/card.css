@@ -1,0 +1,90 @@
+.card {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+
+  width:18rem;
+  height:26rem;
+  padding:2rem 2rem 1.75rem;
+
+  background-color:var(--shape-hover);
+  border:1px solid var(--shape-stroke);
+  border-radius:24px;
+
+  transition:background-color .45s ease, translate .45s ease;
+  
+  &:hover {
+    background-color:var(--shape-stroke);
+    translate:0 -10px;
+  }
+
+  & header {
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    
+    & .name {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      
+      width:100%;
+
+      & h3 {
+        font:var(--title-xs);
+      }
+    }
+
+    & .prices {
+      display:flex;
+      flex-direction:column;
+      gap:.5rem;
+
+      & p:nth-child(1) {
+        font:var(--title-md);
+        color:var(--text-title);
+
+        & > span {
+          font:var(--title-xs);
+        }
+      }
+
+      & p:nth-child(2) {
+        font:var(--body-sm);
+        color:var(--text-label);
+      }
+    }
+  }
+
+  & .details {
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+
+    & ul {
+      display:flex;
+      flex-direction:column;
+      gap:1.25rem;
+
+      font:var(--body-xs);
+      color:var(--text-body);
+      list-style:none;
+      
+      & li {
+        position:relative;
+        
+        &::before {
+          content:'';
+          position:absolute;
+          top:0;
+          left:-1.25rem;
+          width:0.875rem;
+          height:0.875rem;
+  
+          background:url(../../assets/icons/star.svg) no-repeat center/cover;
+        }
+      }
+    }
+  }
+}

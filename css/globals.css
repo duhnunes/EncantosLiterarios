@@ -1,0 +1,101 @@
+*, *::before, *::after {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root {
+  /* COLORS */
+  --pink-light: #C59DD2;
+  --pink-base: #9547A5;
+  --pink-dark: #7D298A;
+  --pink-low: #3F0F41;
+
+  --blue-light: #73B6D2;
+  --blue-base: #358BB9;
+  --blue-mid: #2374A4;
+  --blue-dark: #144A72;
+  --blue-low: #08233C;
+
+  --shape-bg: #00050A;
+  --shape-base: #000F1F;
+  --shape-stroke: #002347;
+  --shape-hover: #001933;
+
+  --text-body: #E2E7E9;
+  --text-title: #F8FBFB;
+  --text-label: #BAC6C9;
+
+  /* FONTS */
+  --raleway: "Raleway", sans-serif;
+
+  --title-xs: 700 1rem/normal var(--raleway);
+  --title-sm: 700 2rem/normal var(--raleway);
+  --title-md: 700 2.5rem/normal var(--raleway);
+  --title-lg: 700 3rem/normal var(--raleway);
+
+  --subtitle: 500 2rem/2 var(--raleway);
+
+  --body-xs: 400 0.75rem/1.4 var(--raleway);
+  --body-sm: 400 0.875rem/1.4 var(--raleway);
+  --body-md: 400 1rem/1.4 var(--raleway);
+  --body-lg: 400 1.25rem/1.4 var(--raleway);
+
+  --button: 700 0.875rem/normal var(--raleway);
+  --link: 500 0.875rem/normal var(--raleway);
+  --tag: 700 0.625rem/normal var(--raleway);
+
+  /* SETTINGS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: var(--body-md);
+
+  background-color:var(--shape-bg);
+  color:var(--text-body);
+
+  scrollbar-width:thin;
+  scrollbar-color:var(--shape-stroke) var(--shape-bg);
+}
+
+body {
+  min-width:320px;
+  height:100svh;
+}
+
+a {
+  text-decoration:none;
+  color:var(--blue-light);
+  font:var(--link);
+  letter-spacing:0%;
+
+  transition:color .25s ease;
+
+  &:hover {
+    color:var(--text-body);
+  }
+}
+
+.divider {
+  display:block;
+  border:1px solid var(--shape-stroke);
+  margin-block:0.75rem;
+}
+
+.color-grid{
+  display:grid;
+  grid-template-columns:repeat(10, 1fr);
+  gap:2rem;
+  position:fixed;
+  
+  width:100%;
+  height:100%;
+
+  & .grid {
+    background-color:rgba(255, 255, 255, 0.01);
+
+    &:nth-child(1),
+    &:nth-child(10) {
+      background-color:transparent;
+    }
+  }
+}
